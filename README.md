@@ -1,5 +1,3 @@
-Here’s an enhanced and clearly structured README file for your GitHub repository:
-
 ---
 
 # Supply Chain Data Analytics Project
@@ -45,16 +43,13 @@ The dataset covers various supply chain features, including:
 ```
 |-- README.md
 |-- data/
-|-- processed/
-|   |-- processed_data.csv
-|-- raw/
-|   |-- supply_chain_data.xlsx
-|-- src/
+|-- processed_data.csv
+|-- supply_chain_data.xlsx
+|-- source/
 |   |-- ETL.py
 |   |-- snowflake_utils.py
-|-- power_bi/
+|-- powerbi_file/
 |   |-- supply_chain_dashboard.pbix
-|-- snowflake_connection_credentials.json
 ```
 
 ## Project Workflow
