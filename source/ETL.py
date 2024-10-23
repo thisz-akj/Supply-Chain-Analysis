@@ -4,21 +4,21 @@ import snowflake.connector
 from snowflake_utils import snowflake_details
 
 # Extract data from files
-supply_chain_df = pd.read_excel(r'C:\Users\Admin\DataScienceProjects\Supply_Chain_Analysis\data\raw\supply_chain_data.xlsx')
+supply_chain_df = pd.read_excel(r'C:\Users\azadk\OneDrive\Desktop\projects\Supply_chain_anallysis\data\supply_chain_data.xlsx')
 
 # Transform the data
 transformed_data = supply_chain_df.dropna()
 transformed_data = transformed_data[transformed_data["Customer demographics"] != "Unknown"]
 
 # Save the transformed data to CSV
-transformed_data.to_csv(r'C:\Users\Admin\DataScienceProjects\Supply_Chain_Analysis\data\processed\processed_data.csv', index=False)
+transformed_data.to_csv(r'C:\Users\azadk\OneDrive\Desktop\projects\Supply_chain_anallysis\data\processed_data.csv', index=False)
 
 # Load the data into Snowflake
 snowflake_credentials = snowflake_details
 
 # Name of the target table in Snowflake
 target_table_name = "SUPPLY_CHAIN_TABLE"
-csv_file_path = r'C:\Users\Admin\DataScienceProjects\Supply_Chain_Analysis\data\processed\processed_data.csv'
+csv_file_path = r'C:\Users\azadk\OneDrive\Desktop\projects\Supply_chain_anallysis\data\processed_data.csv'
 
 # Stage the local file into Snowflake staging area
 staging_area = snowflake_credentials['staging_area']  # Replace with the appropriate staging area location in Snowflake
